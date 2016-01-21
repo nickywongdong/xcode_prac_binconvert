@@ -23,12 +23,13 @@ class ViewController: UIViewController {
         while(flag){
             temp = decimal%2
             decimal = decimal/2
+            print(temp)
             i++
             if(decimal==0){
                 flag=false
             }
         }
-        var result = [Int]();Array(count:i, repeatedValue:0)
+        /*var result = [Int]();Array(count:i, repeatedValue:0)
         decimal = tempDec
         while i<=0 {
             tempDec = decimal%2
@@ -36,10 +37,10 @@ class ViewController: UIViewController {
             result[i] = tempDec
             i--
             
-        }
+        }*/
         //var someInts = [Int]()
         //someInts[0]=temp
-        dump(Array)
+        //dump(Array)
         // prints "someInts is of type [Int] with 0 items."
         
     }
