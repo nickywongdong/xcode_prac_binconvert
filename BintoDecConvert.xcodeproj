@@ -1,0 +1,59 @@
+//
+//  ViewController.swift
+//  BintoDecConvert
+//
+//  Created by Nicholas Wong on 1/20/16.
+//  Copyright © 2016 Poopslayer. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    @IBOutlet var input: UITextField!
+    @IBOutlet var output: UILabel!
+    
+    @IBAction func dectobin(sender: AnyObject) {
+        var decimal:Int = Int(input.text!)!
+        var temp:Int = decimal
+        var tempDec:Int = decimal
+        var i:Int=0
+        
+        var flag:Bool = true
+        while(flag){
+            temp = decimal%2
+            decimal = decimal/2
+            i++
+            if(decimal==0){
+                flag=false
+            }
+        }
+        var result = [Int]();Array(count:i, repeatedValue:0)
+        decimal = tempDec
+        while i<=0 {
+            tempDec = decimal%2
+            decimal = decimal/2
+            result[i] = tempDec
+            i--
+            
+        }
+        //var someInts = [Int]()
+        //someInts[0]=temp
+        dump(Array)
+        // prints "someInts is of type [Int] with 0 items."
+        
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
